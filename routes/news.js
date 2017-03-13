@@ -26,8 +26,8 @@ var upload = multer({ storage: storage });
 
 
 
-router.get('/news/new', middleware.isLoggedIn, function (req, res) {
-  res.render('news/new');
+router.get('/admin/news/new', middleware.isLoggedIn, function (req, res) {
+  res.render('admin/news/new');
 });
 
 

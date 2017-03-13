@@ -15,7 +15,6 @@ var landingRoutes     = require('./routes/landing.js'),
     androidRoutes     = require('./routes/android'),
     newsRoutes        = require('./routes/news'),
     authRoutes        = require('./routes/auth'),
-    adminRoutes       = require('./routes/admin'),
     applicationRoutes = require('./routes/applications');
     
 app.use(session({
@@ -48,7 +47,6 @@ app.use(session({
     app.use(androidRoutes);
     app.use(newsRoutes);
     app.use(authRoutes);
-    app.use(adminRoutes);
     app.use(applicationRoutes);
 
 mongoose.Promise = global.Promise;

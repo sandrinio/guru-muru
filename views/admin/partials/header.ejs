@@ -7,23 +7,23 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../admin/bootstrap/css/bootstrap.min.css">
     <!--Georgian font dejavu web-fonts.ge-->
-    <link rel="stylesheet" href="../dist/georgian_fonts/css/dejavu-sans.min.css">
+    <link rel="stylesheet" href="../admin/dist/georgian_fonts/css/dejavu-sans.min.css">
     <!--My own css-->
-    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="../admin/stylesheets/main.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../admin/dist/css/AdminLTE.min.css">
     <!--w3schools css effects-->
-    <link rel="stylesheet" href="../dist/css/w3.css">
+    <link rel="stylesheet" href="../admin/dist/css/w3.css">
     <!--Skin-->
-    <link rel="stylesheet" href="../dist/css/skins/skin-purple.css">
+    <link rel="stylesheet" href="../admin/dist/css/skins/skin-purple.css">
     <!--CKeditor-->
-    <script src="../plugins/ckeditor/ckeditor.js"></script>
+    <script src="../admin/plugins/ckeditor/ckeditor.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -60,7 +60,7 @@ desired effect
     <header class="main-header">
 
         <!-- Logo -->
-        <a href="/" class="logo">
+        <a href="/admin/admin-panel" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>G</b>uru</span>
             <!-- logo for regular state and mobile devices -->
@@ -94,11 +94,11 @@ desired effect
                                 <li class="user-footer">
                                     <% if(currentUser.permission === 'admin') { %>
                                     <div class="pull-left">
-                                        <a href="/admins/admin-panel" class="btn btn-default btn-flat">ადმინ პანელი</a>
+                                        <a href="/admin/admin-panel" class="btn btn-default btn-flat">ადმინ პანელი</a>
                                     </div>
                                     <% } %>
                                     <div class="pull-right">
-                                        <a href="/landing/logout" class="btn btn-default btn-flat">გამოსვლა</a>
+                                        <a href="/admin/logout" class="btn btn-default btn-flat">გამოსვლა</a>
                                     </div>
                                 </li>
                             </ul>
@@ -115,7 +115,7 @@ desired effect
                         <span class="hidden-xs">Login</span>
                         </a>
                         <ul class="dropdown-menu">
-                            <form action="/landing/login" method="POST">
+                            <form action="/admin/login" method="POST">
                                 <li class="inputs-container">
                                     <input name="username" type="email" placeholder="მეილი">
                                     <input name="password" type="Password" placeholder="პაროლი">
@@ -129,7 +129,7 @@ desired effect
                 </ul>
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu">
-                        <a href="/landing/register">
+                        <a href="/admin/register">
                             <span class="hidden-xs">რეგისტრაცია</span>
                         </a>
                     </li>

@@ -17,6 +17,9 @@ router.get('/app/:id', function(req, res){
     res.render('/app/show')
 });
 
+
+// ADMIN SIDE
+
 router.post('/app/new', function (req, res) {
   var applicationData = req.body.app;
       applicationData.downloadLinks = req.body.downloadLinks;

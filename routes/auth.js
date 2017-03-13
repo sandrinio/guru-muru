@@ -5,15 +5,15 @@ var middleware = require("../middleware");
 var User = require('../models/user');
 
 
-router.get('/landing/login', function (req, res) {
-  res.render('auth/login');
+router.get('/admin/login', function (req, res) {
+  res.render('admin/auth/login');
 });
 
-router.get('/landing/register', function (req, res) {
-  res.render('auth/register')
+router.get('/admin/register', middleware.isLoggedIn, function (req, res) {
+  res.render('admin/auth/register')
 });
 
-router.post('/landing/register', function (req, res) {
+router.post('/admin/register', function (req, res) {
   if(req.body.password === req.body.pass2) {
     var userInfo = req.body.user;
     userInfo.pic = 'user-icon.png';
@@ -21,7 +21,7 @@ router.post('/landing/register', function (req, res) {
       if(err){
         res.send(err)
       }else{
-        res.redirect('/landing/login')
+        res.redirect('/admin/login')
       }
     })
   }else{
@@ -29,15 +29,15 @@ router.post('/landing/register', function (req, res) {
   }
 });
 
-router.post("/landing/login", passport.authenticate("local", {
-  successRedirect: "/",
-  failureRedirect: "/landing/login"
+router.post("/admin/login", passport.authenticate("local", {
+  successRedirect: "/admin/admin-panel",
+  failureRedirect: "/admin/login"
 }), function (req, res) {
   req.flash("success", 'Welcome');
   res.redirect("back");
 });
 
-router.get("/landing/logout", function (req, res) {
+router.get("/admin/logout", function (req, res) {
   req.logout();
   req.flash("success", "Logged Out");
   res.redirect("/");
