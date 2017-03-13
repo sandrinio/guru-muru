@@ -1,0 +1,21 @@
+<% data.hot.forEach(function( hotNews ) { %>
+<div class="news-item">
+    <a href="/hotNews/<%= hotNews._id %>" class="blog-title">
+        <div class="news-item-media-wrap pull-left">
+            <img src="<%= hotNews.billboard %>">
+        </div>
+        <h3><%= hotNews.title %></h3>
+        <p> <%- hotNews.content.slice(0, 200); %>...</p>
+    </a>
+    <%= hotNews.date.toDateString() %>
+    <div  class="btns-container">
+        <% if(currentUser && currentUser.permission === 'admin') { %>
+        <a href="/news/delete" class="btn btn-danger">Delete</a>
+        <form action="/news/edit" id="edit-form">
+            <button type="submit" class="btn btn-warning">Edit</button>
+        </form>
+        <% } %>
+        <a href="/hotNews/<%= hotNews._id %>" class="greenBtn">მეტი</a>
+    </div>
+</div>
+<% }) %>

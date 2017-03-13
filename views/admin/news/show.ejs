@@ -1,0 +1,135 @@
+<% include ../partials/header %>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">Navigation Bar</li>
+                <!-- Optionally, you can add icons to the links -->
+                <li class="active"><a href="/"><i class="fa fa-home" id="sidebar-icon" aria-hidden="true"></i> <span>საწყისი გვერდი</span></a></li>
+                <li><a href="#"><i class="fa fa-newspaper-o" id="sidebar-icon-news" aria-hidden="true"></i><span>სიახლეები</span></a></li>
+                <li class="treeview">
+                    <a href="/smartphone/android"><i class="fa fa-android" id="sidebar-icon" aria-hidden="true"></i> <span>Android</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/smartphone/android">ინსტრუქციები</a></li>
+                        <li><a href="#">აპლიკაციები</a></li>
+                        <li><a href="#">სიახლე სისტემაზე</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-apple" id="sidebar-icon" aria-hidden="true"></i> <span>iPhone</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">ინსტრუქციები</a></li>
+                        <li><a href="#">აპლიკაციები</a></li>
+                        <li><a href="#">სიახლე სისტემაზე</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- =============================================  Your Page Content Here  ============================================== -->
+        <div class="row">
+            <div class="col-md-9">
+                <div class="box box-purple">
+                    <div class="box-header with-border with-shadow">
+                        <h3 class="my-box-title text-center"><%= post.title %></h3>
+                     </div>
+                </div>
+                   <div class="my-box-body">
+                       <div >
+                        <%- post.content %>
+                       </div>
+                   </div>
+
+            </div>
+
+            <!--Sidebar-->
+            <div class="col-md-3">
+                <div class="box box-purple">
+                    <div class="box-header with-border">
+                        <p class="box-title">ახალი ინსტრუქციები<p>
+                    </div>
+                    <div class="box-body">
+                        <ul class="products-list product-list-in-box">
+                            <% var x = 5 %>
+                            <% for(i = 0; i < x; i++){ %>
+                            <li class="item">
+                                <div class="product-img">
+                                    <img src="/dist/static_images/default-50x50.gif">
+                                </div>
+                                <div class="product-info">
+                                    <a href="#" class="newb-title">დავრეგისტრირდეთ Play Market-ზე</a>
+                                    <span class="newb-desc">
+                                            თავად ტკივილი არავის უყვარს, არავინ ეძებს მას და არავის სურს იგი, უბრალოდ იმიტომ, რომ ის ტკივილია...
+                                        </span>
+                                </div>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="box box-purple">
+                    <div class="box-header with-border">
+                        <p class="box-title">TOP 5 აპები</p>
+                    </div>
+                    <div class="box-body">
+                        <ul class="products-list product-list-in-box">
+                            <% var x = 5 %>
+                            <% for(i = 0; i < x; i++){ %>
+                            <li class="item">
+                                <div class="app-img">
+                                    <img src="/dist/static_images/default-50x50.gif">
+                                </div>
+                                <div class="app-title">
+                                    <a href="#">Viber 6.6.0.888 (120251)</a>
+                                    <small class="app-date">Date: <em>01.03.2017</em></small>
+                                </div>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <div class="box-footer text-center">
+                        <a href="#">ყველა</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--Sidebar-->
+      
+    </div>
+    <!--END All Feeds row-->
+
+    </section>
+
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+
+<% include ../partials/footer %>

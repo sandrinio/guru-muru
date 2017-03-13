@@ -1,0 +1,151 @@
+<% include ../partials/header %>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="main-sidebar">
+
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu">
+                <li class="header">Navigation Bar</li>
+                <!-- Optionally, you can add icons to the links -->
+                <li class="active"><a href="/"><i class="fa fa-home" id="sidebar-icon" aria-hidden="true"></i> <span>საწყისი გვერდი</span></a></li>
+                <li><a href="#"><i class="fa fa-newspaper-o" id="sidebar-icon-news" aria-hidden="true"></i><span>სიახლეები</span></a></li>
+                <li class="treeview">
+                    <a href="/smartphone/android"><i class="fa fa-android" id="sidebar-icon" aria-hidden="true"></i> <span>Android</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/smartphone/android">ინსტრუქციები</a></li>
+                        <li><a href="#">აპლიკაციები</a></li>
+                        <li><a href="#">სიახლე სისტემაზე</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-apple" id="sidebar-icon" aria-hidden="true"></i> <span>iPhone</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#">ინსტრუქციები</a></li>
+                        <li><a href="#">აპლიკაციები</a></li>
+                        <li><a href="#">სიახლე სისტემაზე</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- =============================================  Your Page Content Here  ============================================== -->
+            <div class="row">
+                <div class="col-md-1"></div>
+                <!--new blog-->
+                <div class="col-md-9">
+                    <div class="box box-purple">
+                        <div class="box-header with-border">
+                            <h3 class="box-title text-center">ახალი ნიუსის დამატება</h3>
+                            <div class="box-tools pull-right">
+                                <button class="btn btn-box-tool" id="collapse-upload-container"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div id="collapsable">
+                                <!-- Photos upload Form -->
+                                <form id="upload-photos" method="post" action="/upload_photos" enctype="multipart/form-data">
+                                    <div class="form-group">
+                                        <label for="photos-input">File input</label>
+                                        <input id="photos-input" type="file" name="photos[]" multiple="multiple" >
+                                    </div>
+                                    <input type="hidden" name="csrf_token" value="just_a_text_field" />
+                                    <input class="btn btn-warning" type="submit" name="Photo Uploads" value="Upload Photos" />
+                                </form>
+                                <!-- Progress Bar -->
+                                <div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped active"
+                                             role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                            <span class="sr-only"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Photos Album Container -->
+                                <div id="album"></div>
+                            </div>
+                            <form action="/news/new/blogPost" method="POST">
+                                <div class="form-group">
+                                    <label for="billboard" class="col-sm-2 control-label">Billboard</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="blogPost[billboard]"
+                                               class="form-control" id="billboard" placeholder="Image Link">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputTitle" class="col-sm-2 control-label">სათაური</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="blogPost[title]"
+                                               class="form-control" id="inputTitle" placeholder="Title">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <select id="inputTag" name="blogPost[inputTag]">
+                                        <option>Android</option>
+                                        <option>iOS</option>
+                                        <option>Smartphone</option>
+                                        <option>Brand</option>
+                                        <option>Innovation</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                    <div>
+                                        <textarea class="form-control" name="blogPost[content]" rows="10"></textarea>
+
+                                        <script>
+                                          CKEDITOR.replace('blogPost[content]');
+                                        </script>
+
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-primary pull-right">დაპოსტვა</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+    </div>
+    <!--Sidebar-->
+</div>
+<!--END All Feeds row-->
+
+</section>
+
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+
+<% include ../partials/footer %>
