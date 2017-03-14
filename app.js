@@ -15,7 +15,8 @@ var landingRoutes     = require('./routes/landing.js'),
     androidRoutes     = require('./routes/android'),
     newsRoutes        = require('./routes/news'),
     authRoutes        = require('./routes/auth'),
-    applicationRoutes = require('./routes/applications');
+    applicationRoutes = require('./routes/applications'),
+    news_clientRouted = require('./routes/news_client');
     
 app.use(session({
     secret: 'keyboard cat',
@@ -48,6 +49,7 @@ app.use(session({
     app.use(newsRoutes);
     app.use(authRoutes);
     app.use(applicationRoutes);
+    app.use(news_clientRouted);
 
 mongoose.Promise = global.Promise;
 
@@ -71,7 +73,10 @@ mongoose.connect("mongodb://sandrinio:kukuruku321@ds157839.mlab.com:57839/gsm-gu
 /* ============================            ============================ */
 //ეს ყოველთვის უცვლელია და არის ბოლოში
 
+var port = process.env.PORT || 3000;
 
-app.listen(process.env.PORT || 3000, process.env.IP,function () {  //if server is on
+app.listen(port, process.env.IP, function () {  //if server is on
   console.log("======STARTED======");
+  console.log("PORT: " + port);
+  console.log("PORT: " + process.env.IP);
 });

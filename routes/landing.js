@@ -1,18 +1,27 @@
 var express = require('express');
 var router = express.Router();
 var News = require("../models/news");
+var Apps = require('../models/applications');
 
 
 
 // CLIENT SIDE
 router.get('/', function (req, res) {
+  var appObject = {};
+  Apps.find({}).sort('-date').exec(function (err, apps) {
+    if(err){
+      res.send(err)
+    }else{
+      appObject.appz = apps;
+    }
+  });
   News.find({}).sort('-date').exec(function (err, newsPosts){
     if(err){
       console.log(err)
     }else{
       //hot news data
       var totalBlogPostsCount = newsPosts.length,
-          pageSize = 10,
+          pageSize = 6,
           pageCount = totalBlogPostsCount / pageSize + 1,
           currentPage = 1,
           blogPostsArray = [],
@@ -30,7 +39,8 @@ router.get('/', function (req, res) {
                               pageSize: pageSize,
                               totalBlogPostsCount: totalBlogPostsCount,
                               pageCount: pageCount,
-                              currentPage: currentPage
+                              currentPage: currentPage,
+                              apps: appObject
                              });
         }
     });

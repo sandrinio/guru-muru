@@ -39,3 +39,33 @@
 .sidebar-margins {
     margin-top: 126px;
 }
+
+.show-blog-header {
+    margin: 5px auto;
+    max-width: 600px;
+}
+
+#my-container {
+    margin-top: 126px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.blabla {
+    margin: 0 auto;
+}
+
+.my-entry-meta {
+    margin: 10px -10px -15px 0;
+    list-style: none;
+}
+
+.active-link {
+    border-bottom: solid 2px #1ABC9C;
+}
+
+.first-letter {
+    font-weight: 800;
+    color: #1ABC9C;
+}
+

@@ -50,8 +50,8 @@
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="#" class="standard-logo" data-dark-logo="../client/images/gurulogo.png"><img src="../client/images/gurulogo.png" alt="GSM Guru"></a>
-                    <a href="#" class="retina-logo" data-dark-logo="../client/images/gurulogo.png"><img src="../client/images/gurulogo.png" alt="Guru"></a>
+                    <a href="/" class="standard-logo" data-dark-logo="../client/images/gurulogo.png"><img src="../client/images/gurulogo.png" alt="GSM Guru"></a>
+                    <a href="/" class="retina-logo" data-dark-logo="../client/images/gurulogo.png"><img src="../client/images/gurulogo.png" alt="Guru"></a>
                 </div><!-- #logo end -->
 
                 <!-- Primary Navigation
@@ -59,7 +59,7 @@
                 <nav id="primary-menu">
 
                     <ul class="sf-js-enabled" style="touch-action: pan-y;">
-                        <li><a href="#"><div class="hover-effect">მთავარი</div></a>
+                        <li><a href="#"><div class="hover-effect active-link">სიახლე</div></a>
                         </li>
                         <li><a href="#"><div class="hover-effect">სხვადასხვა</div></a>
                         </li>
@@ -106,7 +106,7 @@
 	</section><!-- #page-title end -->
 
     <div class="fancy-title title-center title-dotted-border topmargin">
-        <h3>ყველაზე მოთხოვნადი</h3>
+        <h3><span class="first-letter">ყ</span>ველაზე <span class="first-letter">მ</span>ოთხოვნადი <span class="first-letter">ი</span>ნსტრუქციები</h3>
     </div>
 
      <!-- Most Wanted - Carousel
@@ -147,7 +147,6 @@
 		============================================= -->
 		<div class="container">
             <div class="row">
-
 				<div class="col-md-9 col-sm-12">
 
 					<!-- Post Content
@@ -158,26 +157,26 @@
 						============================================= -->
 
                         <div class="fancy-title title-center title-dotted-border topmargin">
-                            <h3>ახალი ამბები</h3>
+                            <h3><spam class="first-letter">ა</spam>ხალი <spam class="first-letter">ა</spam>მბები</h3>
                         </div>
 						<div id="posts" class="small-thumbs">
                             <% data.hot.forEach(function( hotNews ) { %>
 							<div class="entry clearfix">
 								<div class="entry-image">
-									<a href="/hotNews/<%= hotNews._id %>" data-lightbox="image"><img class="image_fade" src="<%= hotNews.billboard %>" alt="Standard Post with Image"></a>
+									<a href="/client/Hot-News/<%= hotNews._id %>" data-lightbox="image"><img class="image_fade" src="<%= hotNews.billboard %>" alt="Standard Post with Image"></a>
 								</div>
 								<div class="entry-c">
 									<div class="entry-title">
-										<h2><a href="/hotNews/<%= hotNews._id %>"><%= hotNews.title %></a></h2>
+										<h2><a href="/client/Hot-News/<%= hotNews._id %>"><%= hotNews.title %></a></h2>
 									</div>
 									<ul class="entry-meta clearfix">
-										<li><i class="icon-calendar3"></i><%= hotNews.date.toDateString() %>4</li>
+										<li><i class="icon-calendar3"></i><%= hotNews.date.toDateString() %></li>
 										<li><a href="#"><i class="icon-user"></i><%= hotNews.author.fullname %></a></li>
 										<li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
 									</ul>
 									<div class="entry-content">
-										<p><%- hotNews.content.slice(0, 200); %></p>
-										<a href="/hotNews/<%= hotNews._id %>" class="more-link">მეტი</a>
+										<p><%- hotNews.content.slice(0, 200); %>...</p>
+										<a href="/client/Hot-News/<%= hotNews._id %>" class="more-link">მეტი</a>
 									</div>
 								</div>
 							</div>
@@ -193,7 +192,7 @@
                                 <% if (pageCount > 1) { %>
                                 <ul class="pagination">
                                     <% if (currentPage > 1) { %>
-                                    <li><a href="/mainPage/?page=1">&laquo;</a></li>
+                                    <li><a href="/?page=1">&laquo;</a></li>
                                     <% } %>
                                     <% var i = 1;
                                         if (currentPage > 5) {
@@ -206,14 +205,14 @@
                                     <% if (currentPage == i) { %>
                                     <li class="active"><span><%= i %> <span class="sr-only">(current)</span></span></li>
                                     <% } else { %>
-                                    <li><a href="/mainPage/?page=<%= i %>"><%= i %></a></li>
+                                    <li><a href="/?page=<%= i %>"><%= i %></a></li>
                                     <% } %>
                                     <% if (i == ( + currentPage + 4)) { %>
                                     <li class="disabled"><a href="#">...</a></li>
                                     <% break; } %>
                                     <% } %>
                                     <% if (currentPage == pageCount) { %>
-                                    <li><a href="/mainPage/?page=<%= currentPage %>">&raquo;</a></li>
+                                    <li><a href="/?page=<%= currentPage %>">&raquo;</a></li>
                                     <% } %>
                                 </ul>
                             </nav>
@@ -230,21 +229,21 @@
                     <div class="widget clearfix">
                         <h4>აპები</h4>
                         <div class="post-list-footer">
-                            <% for(i = 0; i < x; i++) { %>
+                            <% apps.appz.forEach(function (appData) { %>
                             <div class="spost clearfix">
                                 <div class="entry-image">
                                     <a href="#">
-                                        <img src="../client/images/1.jpg" alt="">
+                                        <img src="<%= appData.icon %>" alt="">
                                     </a>
                                 </div>
                                 <div class="entry-c">
                                     <div class="entry-title">
-                                        <a href="#"><h4>Viber</h4></a>
-                                        <ul class="entry-meta"><li>10.03.2017</li></ul>
+                                        <a href="#"><h4><%= appData.name %></h4></a>
+                                        <ul class="entry-meta"><li><%= appData.date.toDateString() %></li></ul>
                                     </div>
                                 </div>
                             </div>
-                            <% } %>
+                            <% }) %>
                         </div>
                     </div>
 
@@ -275,42 +274,42 @@
 		</section><!-- #content end -->
 
 
-		<!-- Footer
-		============================================= -->
-		<footer id="footer" class="dark">
+    <!-- Footer
+    ============================================= -->
+    <footer id="footer" class="dark">
 
-			<div class="container">
+        <div class="container">
 
-				<!-- Footer Widgets
-				============================================= -->
-				<div class="footer-widgets-wrap clearfix">
+            <!-- Footer Widgets
+            ============================================= -->
+            <div class="footer-widgets-wrap clearfix">
 
-						<div class="col_one_third">
+                <div class="col_one_third">
 
 
 
-						</div>
+                </div>
 
-					</div>
+            </div>
 
-				</div><!-- .footer-widgets-wrap end -->
+        </div><!-- .footer-widgets-wrap end -->
 
-		</footer><!-- #footer end -->
+    </footer><!-- #footer end -->
 
-	</div><!-- #wrapper end -->
+</div><!-- #wrapper end -->
 
-	<!-- Go To Top
-	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script type="text/javascript" src="../client/js/jquery.js"></script>
-	<script type="text/javascript" src="../client/js/plugins.js"></script>
+<!-- External JavaScripts
+============================================= -->
+<script type="text/javascript" src="../client/js/jquery.js"></script>
+<script type="text/javascript" src="../client/js/plugins.js"></script>
 
-	<!-- Footer Scripts
-	============================================= -->
-	<script type="text/javascript" src="../client/js/functions.js"></script>
+<!-- Footer Scripts
+============================================= -->
+<script type="text/javascript" src="../client/js/functions.js"></script>
 
 
 </body>

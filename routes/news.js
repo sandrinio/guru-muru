@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var multer  = require('multer');
 var path = require('path');
-var middleware = require('../middleware')
+var middleware = require('../middleware');
 var News = require('../models/news'),
     fs             = require('fs'),
     formidable     = require('formidable'),
@@ -31,18 +31,18 @@ router.get('/admin/news/new', middleware.isLoggedIn, function (req, res) {
 });
 
 
-router.get('/hotNews/:id', function (req, res) {
+router.get('/admin/hotNews/:id', function (req, res) {
   News.findById(req.params.id, function (err, post) {
     if(err){
       console.log(err)
     }else{
-      res.render('news/show', {post: post})
+      res.render('admin/news/show', {post: post})
     }
   });
 });
 
-router.get('/news/:id/edit', function (req, res) {
-  res.render('news/edit')
+router.get('/admin/news/:id/edit', function (req, res) {
+  res.render('admin/news/edit')
 });
 
 router.post('/upload_photos', function (req, res){
@@ -112,13 +112,6 @@ router.post('/upload_photos', function (req, res){
 });
 
 
-router.post("/news/uploads/blogUploads", middleware.isLoggedIn, upload.single('upload'), function (req, res){
-  var domein = 'https://gsm-guru-sandrinio.c9users.io';
-  var fileLink = req.file.path;
-  var slisedLink = fileLink.slice(6);
-  console.log(domein + slisedLink);
-  res.send(domein + slisedLink);
-});
 
 router.post('/news/new/blogPost', middleware.isLoggedIn, function(req, res){
   var postContent = req.body.blogPost;
@@ -132,7 +125,7 @@ router.post('/news/new/blogPost', middleware.isLoggedIn, function(req, res){
         return console.log(err)
        }
        console.log(createdPost);
-       res.redirect("/");
+       res.redirect("admin/admin-panel");
   });
 });
 
@@ -144,7 +137,7 @@ router.delete('/news/:id', function (req, res) {
       console.log(err)
     }else{
       req.flash("success", blogPost.title + " " + "has been removed")
-      res.redirect("/admin/admin-panel");
+      res.redirect("admin/admin-panel");
     }
   });
 });
