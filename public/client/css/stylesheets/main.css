@@ -35,3 +35,7 @@
     transition-duration: .35s;
     color: #1ABC9C;
 }
+
+.sidebar-margins {
+    margin-top: 126px;
+}

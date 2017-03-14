@@ -144,7 +144,7 @@ router.delete('/news/:id', function (req, res) {
       console.log(err)
     }else{
       req.flash("success", blogPost.title + " " + "has been removed")
-      res.redirect("/");
+      res.redirect("/admin/admin-panel");
     }
   });
 });
