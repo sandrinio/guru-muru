@@ -32,6 +32,33 @@
 </head>
 
 <body class="stretched">
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '389823831395542',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+   
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1828802387394486";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Document Wrapper
 ============================================= -->
@@ -112,6 +139,18 @@
                 </div>
             </div>
             <%- blogPost.content %>
+                                <!-- Comments
+							============================================= -->
+							<div id="comments" class="clearfix">
+
+								<h3 id="comments-title"><span><fb:comments-count href="https://guru-muru-sandrinio.c9users.io/client/Hot-News/<%= blogPost._id %>"></fb:comments-count></span> Comments</h3>
+
+								<!-- Facebook Comments
+								============================================= -->
+								<div class="fb-comments" data-width="100%" data-href="https://guru-muru-sandrinio.c9users.io/client/Hot-News/<%= blogPost._id %>" data-numposts="5" data-colorscheme="light"></div>
+								<!-- Facebook Comments end -->
+
+							</div><!-- #comments end -->
 
         </div>
 
@@ -163,6 +202,7 @@
                     </div>
                 </div>
             </div><!-- .sidebar end -->
+            
         </div>
     </div>
 </div>
