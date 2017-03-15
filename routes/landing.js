@@ -8,13 +8,17 @@ var Apps = require('../models/applications');
 // CLIENT SIDE
 router.get('/', function (req, res) {
   var appObject = {};
-  Apps.find({}).sort('-date').exec(function (err, apps) {
-    if(err){
-      res.send(err)
+  Apps.find({})
+    .sort('-date')
+    .limit(5)
+    .exec(function (err, apps) {
+    if( err ){
+      res.send( err )
     }else{
       appObject.appz = apps;
     }
   });
+
   News.find({}).sort('-date').exec(function (err, newsPosts){
     if(err){
       console.log(err)

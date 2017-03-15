@@ -9,18 +9,17 @@ var Apps = require('../models/applications'),
     fileType       = require('file-type');
 
 
-router.get('/app/new', function(req, res){
-   res.render('applications/new') 
+router.get('/admin/app/new', function(req, res){
+   res.render('admin/applications/new')
 });
 
-router.get('/app/:id', function(req, res){
-    res.render('/app/show')
+router.get('/admin/app/:id', function(req, res){
+
 });
 
 
 // ADMIN SIDE
-
-router.post('/app/new', function (req, res) {
+router.post('/admin/app/new', function (req, res) {
   var applicationData = req.body.app;
       applicationData.downloadLinks = req.body.downloadLinks;
       applicationData.author = {

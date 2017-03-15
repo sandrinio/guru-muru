@@ -1,6 +1,8 @@
 var express = require("express");
 var app = express();
 
+app.set('port', (process.env.PORT || 3000));
+
 var mongoose       = require("mongoose"),
     passport       = require("passport"),
     bodyParser     = require("body-parser"),
@@ -11,12 +13,13 @@ var mongoose       = require("mongoose"),
 
     User           = require("./models/user");
     
-var landingRoutes     = require('./routes/landing.js'),
-    androidRoutes     = require('./routes/android'),
-    newsRoutes        = require('./routes/news'),
-    authRoutes        = require('./routes/auth'),
-    applicationRoutes = require('./routes/applications'),
-    news_clientRouted = require('./routes/news_client');
+var landingRoutes            = require('./routes/landing.js'),
+    androidRoutes            = require('./routes/android'),
+    newsRoutes               = require('./routes/news'),
+    authRoutes               = require('./routes/auth'),
+    applicationRoutes        = require('./routes/applications'),
+    news_clientRoutes        = require('./routes/news_client'),
+    applications_clientRoute = require('./routes/applications_client')
     
 app.use(session({
     secret: 'keyboard cat',
@@ -49,7 +52,8 @@ app.use(session({
     app.use(newsRoutes);
     app.use(authRoutes);
     app.use(applicationRoutes);
-    app.use(news_clientRouted);
+    app.use(news_clientRoutes);
+    app.use(applications_clientRoute);
 
 mongoose.Promise = global.Promise;
 
@@ -73,10 +77,6 @@ mongoose.connect("mongodb://sandrinio:kukuruku321@ds157839.mlab.com:57839/gsm-gu
 /* ============================            ============================ */
 //ეს ყოველთვის უცვლელია და არის ბოლოში
 
-var port = process.env.PORT || 3000;
-
-app.listen(port, process.env.IP, function () {  //if server is on
+app.listen(app.get('port'), process.env.IP, function () {  //if server is on
   console.log("======STARTED======");
-  console.log("PORT: " + port);
-  console.log("PORT: " + process.env.IP);
 });
