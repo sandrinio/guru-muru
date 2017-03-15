@@ -4938,7 +4938,7 @@ Blog
 .entry {
 	position: relative;
 	margin: 0 15px 25px;
-	padding: 10px 0 25px;
+	padding: 0 0 25px;
 	background-color: white;
 	box-shadow: 0 0 15px rgba(30, 30, 30, 0.29);
 	border-radius: 2px;
