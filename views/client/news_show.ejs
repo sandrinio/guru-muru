@@ -134,23 +134,35 @@
                         <li><a href="#"><i class="icon-user"></i><%= blogPost.author.fullname %></a></li>
                         <li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
                     </ul>
+                        <div class="blog-share clearfix">
+                                <a href="#" class="social-icon si-borderless si-text-color si-facebook" id="shareBtn" title="Facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-text-color si-twitter" title="Twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-text-color si-youtube" title="Youtube">
+                                    <i class="icon-youtube"></i>
+                                    <i class="icon-youtube"></i>
+                                </a>
+                        </div>
                     </div>
                     <div class="line"><h4><%= blogPost.title %></h4></div>
                 </div>
             </div>
+
             <%- blogPost.content %>
-                                <!-- Comments
-							============================================= -->
-							<div id="comments" class="clearfix">
+             <!-- Comments
+			============================================= -->
+            <div id="comments" class="clearfix">
 
-								<h3 id="comments-title"><span><fb:comments-count href="https://guru-muru-sandrinio.c9users.io/client/Hot-News/<%= blogPost._id %>"></fb:comments-count></span> Comments</h3>
-
-								<!-- Facebook Comments
-								============================================= -->
-								<div class="fb-comments" data-width="100%" data-href="https://guru-muru-sandrinio.c9users.io/client/Hot-News/<%= blogPost._id %>" data-numposts="5" data-colorscheme="light"></div>
-								<!-- Facebook Comments end -->
-
-							</div><!-- #comments end -->
+                <!-- Facebook Comments
+                ============================================= -->
+                <div class="fb-comments" data-width="100%" data-href="https://guru-muru-sandrinio.c9users.io/client/Hot-News/<%= blogPost._id %>" data-numposts="5" data-colorscheme="light"></div>
+                <!-- Facebook Comments end -->
+            </div><!-- #comments end -->
 
         </div>
 
@@ -207,6 +219,16 @@
     </div>
 </div>
 </section><!-- #content end -->
+
+    <script>
+      document.getElementById('shareBtn').onclick = function() {
+        FB.ui({
+          method: 'share',
+          display: 'popup',
+          href: 'http://localhost:3000/client/Hot-News/<%= blogPost._id %>',
+        }, function(response){});
+      }
+    </script>
 
 
 <!-- Footer

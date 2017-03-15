@@ -53,6 +53,7 @@
 
 .blabla {
     margin: 0 auto;
+    display: inline-block;
 }
 
 .my-entry-meta {
@@ -79,4 +80,22 @@
 
 .widget-footer a:hover {
     color: #1ABC9C;
+}
+
+.social-share {
+    display: inline-block;
+    float: right;
+}
+
+.social-share .social-icon{
+    font-size: 15px;
+}
+
+.blog-share {
+    display: inline-block;
+    margin-left: -14px;
+}
+
+.blog-share .social-icon {
+    font-size: 18px;
 }
