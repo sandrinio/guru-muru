@@ -123,35 +123,49 @@
     <div class="container">
     <div class="row">
         <div class="col-md-9 col-sm-12" id="my-container">
+
             <!-- Post Content
             ============================================= -->
-            <div class="blog-title-container">
-                <div class="show-blog-header">
-                    <img src="<%= app.icon %>" alt="<%= app.icon %>">
-                    <div class="blabla">
-                    <ul class="entry-meta clearfix">
-                        <li><i class="icon-calendar3"></i><%= app.date.toDateString() %></li>
-                        <li><a href="#"><i class="icon-user"></i><%= app.author.fullname %></a></li>
-                        <li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
-                    </ul>
-                        <div class="blog-share clearfix">
-                                <a href="#" class="social-icon si-borderless si-text-color si-facebook" id="shareBtn" title="Facebook">
-                                    <i class="icon-facebook"></i>
-                                    <i class="icon-facebook"></i>
-                                </a>
-                                <a href="#" class="social-icon si-borderless si-text-color si-twitter" title="Twitter">
-                                    <i class="icon-twitter"></i>
-                                    <i class="icon-twitter"></i>
-                                </a>
-                                <a href="#" class="social-icon si-borderless si-text-color si-youtube" title="Youtube">
-                                    <i class="icon-youtube"></i>
-                                    <i class="icon-youtube"></i>
-                                </a>
-                        </div>
+                <div class="show-app-header">
+                    <div class="app-image-container">
+                        <img src="<%= app.icon %>" alt="<%= app.icon %>">
                     </div>
+                    <div class="app-info">
+                          <h3><%= app.name %></h3>
+                        <table class="table table-condensed table-blockView">
+                            <tbody>
+                            <tr>
+                                <th>ვერსია</th>
+                                <td><%= app.version %></td>
+                            </tr>
+                            <tr>
+                                <th>ათვირთვის თარიღი</th>
+                                <td><%= app.date.toDateString() %></td>
+                            </tr>
+                            <tr>
+                                <th>გადმოწერა</th>
+                                <td><a href="<%= app.downloadLinks.local %>" download><span class="first-letter">ლინკი</span></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                        <!--<div class="blog-share clearfix">-->
+                                <!--<a href="#" class="social-icon si-borderless si-text-color si-facebook" id="shareBtn" title="Facebook">-->
+                                    <!--<i class="icon-facebook"></i>-->
+                                    <!--<i class="icon-facebook"></i>-->
+                                <!--</a>-->
+                                <!--<a href="#" class="social-icon si-borderless si-text-color si-twitter" title="Twitter">-->
+                                    <!--<i class="icon-twitter"></i>-->
+                                    <!--<i class="icon-twitter"></i>-->
+                                <!--</a>-->
+                                <!--<a href="#" class="social-icon si-borderless si-text-color si-youtube" title="Youtube">-->
+                                    <!--<i class="icon-youtube"></i>-->
+                                    <!--<i class="icon-youtube"></i>-->
+                                <!--</a>-->
+                        <!--</div>-->
                     <div class="line"><h4><%= app.title %></h4></div>
                 </div>
-            </div>
 
             <%- app.content %>
              <!-- Comments

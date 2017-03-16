@@ -45,6 +45,26 @@
     max-width: 600px;
 }
 
+.show-app-header {
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+.app-image-container {
+    float: left;
+    margin: 0 10px 25px 0
+}
+
+.app-info {
+    display: block;
+    margin-left: 10px;
+}
+
+
+.table-blockView {
+    display: block;
+}
+
 #my-container {
     margin-top: 126px;
     margin-bottom: 20px;
@@ -98,4 +118,8 @@
 
 .blog-share .social-icon {
     font-size: 18px;
+}
+
+#app-h4-color:hover {
+    color: #1ABC9C
 }
