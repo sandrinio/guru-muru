@@ -48,7 +48,7 @@ $(document).ready(function() {
 
         if (app.status) {
           console.log(app.publicPath);
-          html += '<p>http://localhost:3000' + app.publicPath + '</p>';
+          html += '<p>'+ app.publicPath + '</p>';
         } else {
           html += '<div class="col-xs-6 col-md-4"><a href="#" class="thumbnail">Invalid file type - ' + app.filename  + '</a></div>';
         }

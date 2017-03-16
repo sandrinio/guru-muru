@@ -31,6 +31,34 @@
 
 </head>
 
+<body class="stretched">
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '389823831395542',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+   
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1828802387394486";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Document Wrapper
 ============================================= -->
@@ -90,106 +118,140 @@
 
     </header><!-- #header end -->
 
-    <!-- Content
-    ============================================= -->
+<!-- Content
+============================================= -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-9 col-sm-12" id="my-container">
-                <!-- Post Content
-                ============================================= -->
-                <div class="blog-title-container">
-                    <div class="show-blog-header">
-                        <img src="<%= app.icon %>" alt="<%= app.icon %>">
-                        <div class="blabla">
-                            <ul class="entry-meta clearfix">
-                                <li><i class="icon-calendar3"></i><%= app.date.toDateString() %></li>
-                                <li><a href="#"><i class="icon-user"></i><%= app.author.fullname %></a></li>
-                                <li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
-                            </ul>
+    <div class="row">
+        <div class="col-md-9 col-sm-12" id="my-container">
+            <!-- Post Content
+            ============================================= -->
+            <div class="blog-title-container">
+                <div class="show-blog-header">
+                    <img src="<%= app.icon %>" alt="<%= app.icon %>">
+                    <div class="blabla">
+                    <ul class="entry-meta clearfix">
+                        <li><i class="icon-calendar3"></i><%= app.date.toDateString() %></li>
+                        <li><a href="#"><i class="icon-user"></i><%= app.author.fullname %></a></li>
+                        <li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
+                    </ul>
+                        <div class="blog-share clearfix">
+                                <a href="#" class="social-icon si-borderless si-text-color si-facebook" id="shareBtn" title="Facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-text-color si-twitter" title="Twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon si-borderless si-text-color si-youtube" title="Youtube">
+                                    <i class="icon-youtube"></i>
+                                    <i class="icon-youtube"></i>
+                                </a>
                         </div>
-                        <div class="line"><h4><%= app.name %></h4></div>
+                    </div>
+                    <div class="line"><h4><%= app.title %></h4></div>
+                </div>
+            </div>
+
+            <%- app.content %>
+             <!-- Comments
+			============================================= -->
+            <div id="comments" class="clearfix">
+
+                <!-- Facebook Comments
+                ============================================= -->
+                <div class="fb-comments" data-width="100%" data-href="https://guru-muru-sandrinio.c9users.io/client/app/show/<%= app._id %>" data-numposts="5" data-colorscheme="light"></div>
+                <!-- Facebook Comments end -->
+            </div><!-- #comments end -->
+
+        </div>
+
+        <!-- Sidebar
+        ============================================= -->
+        <% var x = 5 %>
+        <div class="sidebar-margins">
+            <div class="col-md-3 col-sm-12">
+
+                <div class="widget clearfix">
+                    <h4>აპები</h4>
+                    <div class="post-list-footer">
+                        <% for(i = 0; i < x; i++) { %>
+                        <div class="spost clearfix">
+                            <div class="entry-image">
+                                <a href="#">
+                                    <img src="../../client/images/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="entry-c">
+                                <div class="entry-title">
+                                    <a href="#"><h4>Viber</h4></a>
+                                    <ul class="entry-meta"><li>10.03.2017</li></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
                     </div>
                 </div>
-                <%- app.content %>
 
-            </div>
-
-            <!-- Sidebar
-            ============================================= -->
-            <% var x = 5 %>
-            <div class="sidebar-margins">
-                <div class="col-md-3 col-sm-12">
-
-                    <div class="widget clearfix">
-                        <h4>აპები</h4>
-                        <div class="post-list-footer">
-                            <% for(i = 0; i < x; i++) { %>
-                            <div class="spost clearfix">
-                                <div class="entry-image">
-                                    <a href="#">
-                                        <img src="../../client/images/1.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <a href="#"><h4>Viber</h4></a>
-                                        <ul class="entry-meta"><li>10.03.2017</li></ul>
-                                    </div>
+                <div class="widget clearfix">
+                    <h4>ახალი დამატებული</h4>
+                    <div class="post-list-footer">
+                        <% for(i = 0; i < x; i++) { %>
+                        <div class="spost clearfix">
+                            <div class="entry-image">
+                                <a href="#">
+                                    <img src="../../client/images/1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="entry-c">
+                                <div class="entry-title">
+                                    <a href="#"><h4>როგორ გადმოვწეროთ აპლიკაციები ანდროიდზე</h4></a>
+                                    <ul class="entry-meta"><li>10.03.2017</li></ul>
                                 </div>
                             </div>
-                            <% } %>
                         </div>
+                        <% } %>
                     </div>
-
-                    <div class="widget clearfix">
-                        <h4>ახალი დამატებული</h4>
-                        <div class="post-list-footer">
-                            <% for(i = 0; i < x; i++) { %>
-                            <div class="spost clearfix">
-                                <div class="entry-image">
-                                    <a href="#">
-                                        <img src="../../client/images/1.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="entry-c">
-                                    <div class="entry-title">
-                                        <a href="#"><h4>როგორ გადმოვწეროთ აპლიკაციები ანდროიდზე</h4></a>
-                                        <ul class="entry-meta"><li>10.03.2017</li></ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <% } %>
-                        </div>
-                    </div>
-                </div><!-- .sidebar end -->
-            </div>
-           
+                </div>
+            </div><!-- .sidebar end -->
+            
         </div>
     </div>
-    </section><!-- #content end -->
+</div>
+</section><!-- #content end -->
+
+    <script>
+      document.getElementById('shareBtn').onclick = function() {
+        FB.ui({
+          method: 'share',
+          display: 'popup',
+          href: 'http://localhost:3000/client/app/show/<%= app._id %>',
+        }, function(response){});
+      }
+    </script>
 
 
-    <!-- Footer
-    ============================================= -->
-    <footer id="footer" class="dark">
+<!-- Footer
+============================================= -->
+<footer id="footer" class="dark">
 
-        <div class="container">
+    <div class="container">
 
-            <!-- Footer Widgets
-            ============================================= -->
-            <div class="footer-widgets-wrap clearfix">
+        <!-- Footer Widgets
+        ============================================= -->
+        <div class="footer-widgets-wrap clearfix">
 
-                <div class="col_one_third">
+            <div class="col_one_third">
 
 
-
-                </div>
 
             </div>
 
-        </div><!-- .footer-widgets-wrap end -->
+        </div>
 
-    </footer><!-- #footer end -->
+    </div><!-- .footer-widgets-wrap end -->
+
+</footer><!-- #footer end -->
 
 </div><!-- #wrapper end -->
 
