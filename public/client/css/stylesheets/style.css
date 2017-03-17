@@ -5449,7 +5449,7 @@ body:not(.device-touch) .entry-link {
 .spost,
 .mpost {
 	margin-top: 5px;
-	padding-top: 20px;
+	padding-top: 5px;
 	border-top: 1px dashed #E5E5E5;
 }
 
