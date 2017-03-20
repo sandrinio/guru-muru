@@ -60,7 +60,6 @@
     margin-left: 10px;
 }
 
-
 .table-blockView {
     display: block;
 }
@@ -69,6 +68,8 @@
     margin-top: 126px;
     margin-bottom: 20px;
     background-color: white;
+    box-shadow: 0 0 2px rgba(30, 30, 30, 0.29);
+    padding-bottom: 10px;
 }
 
 .blabla {
@@ -121,5 +122,24 @@
 }
 
 #app-h4-color:hover {
-    color: #1ABC9C
+    color: #1ABC9C;
+}
+
+.market-icons img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+.market-icons img:hover {
+    transition-duration: .35s;
+    width: 28px;
+}
+
+.fl-hov:hover {
+    color: #1a9273;
+}
+
+.togglet img {
+    width: 25px;
+    margin-top: -5px;
 }

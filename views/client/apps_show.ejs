@@ -1,122 +1,59 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
+<% include ./partials/header_1 %>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
-
-    <!-- Stylesheets
-    ============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/stylesheets/style.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/dark.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/magnific-popup.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/stylesheets/w3.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/stylesheets/main.css" type="text/css" />
-    <link rel="stylesheet" href="../../client/css/arial-geo.min.css">
-
-
-    <link rel="stylesheet" href="../../client/css/responsive.css" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-
-    <!-- Document Title
-    ============================================= -->
-    <title>GSM Guru</title>
-
-</head>
-
-<body class="stretched">
-    <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '389823831395542',
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-   
-</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1828802387394486";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Document Wrapper
+<!-- Primary Navigation
 ============================================= -->
-<div id="wrapper" class="clearfix">
+<nav id="primary-menu">
 
-    <!-- Header
-    ============================================= -->
-    <header id="header" class="dark">
+    <ul class="sf-js-enabled" style="touch-action: pan-y;">
+        <li><a href="/"><div class="hover-effect">სიახლეები</div></a>
+        </li>
+        <li><a href="/manuals/smartphone-manuals"><div class="hover-effect">ვიდეო ინსტრუქციები</div></a>
+        </li>
+        <li><a href="#"><div class="hover-effect">აპები და სერვისები</div></a>
+        </li>
+    </ul>
 
-        <div id="header-wrap">
+    <% include ./partials/header_2 %> <!-- TOP SEARCH BAR -->
 
-            <div class="container clearfix">
+</nav><!-- #primary-menu end -->
 
-                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+</div>
 
-                <!-- Logo
-                ============================================= -->
-                <div id="logo">
-                    <a href="/" class="standard-logo" data-dark-logo="../../client/images/gurulogo.png"><img src="../../client/images/gurulogo.png" alt="GSM Guru"></a>
-                    <a href="/" class="retina-logo" data-dark-logo="../../client/images/gurulogo.png"><img src="../../client/images/gurulogo.png" alt="Guru"></a>
-                </div><!-- #logo end -->
-
-                <!-- Primary Navigation
-                ============================================= -->
-                <nav id="primary-menu">
-
-                    <ul class="sf-js-enabled" style="touch-action: pan-y;">
-                        <li><a href="/"><div class="hover-effect active-link">სიახლე</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">სხვადასხვა</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">ანდროიდი</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">აიფონი</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">აპები</div></a>
-                        </li>
-                    </ul>
+</div>
 
 
-
-                    <!-- Top Search
-                    ============================================= -->
-                    <div id="top-search">
-                        <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                        <form action="" method="get">
-                            <input type="text" name="q" class="form-control" value="" placeholder="შეიყვანე ტექსტი &amp; დააჭირე ენტერს">
-                        </form>
-                    </div><!-- #top-search end -->
-
-                </nav><!-- #primary-menu end -->
-
-            </div>
-
-        </div>
+</header><!-- #header end -->
 
 
     </header><!-- #header end -->
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '389823831395542',
+          xfbml      : true,
+          version    : 'v2.8'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1828802387394486";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Content
 ============================================= -->
@@ -144,7 +81,13 @@
                             </tr>
                             <tr>
                                 <th>გადმოწერა</th>
-                                <td><a href="<%= app.downloadLinks.local %>" download><span class="first-letter">ლინკი</span></a></td>
+                                <td><a href="<%= app.downloadLinks.local %>" download><span class="first-letter fl-hov">ლოკალური  ლინკი</span></a></td>
+                            </tr>
+                            <tr>
+                                <th>ოფიციალური</th>
+                                <td><a class="market-icons" href="<%= app.downloadLinks.playMarket %>" target="_blank"><img src="/uploads/staticResources/playstore-icon.png"></a><a
+                                                href="<%= app.downloadLinks.appStore %>" class="market-icons" target="_blank">
+                                        <img src="/uploads/staticResources/appstore-icon.png"></a></td>
                             </tr>
                             </tbody>
                         </table>
@@ -239,49 +182,10 @@
         FB.ui({
           method: 'share',
           display: 'popup',
-          href: 'http://localhost:3000/client/app/show/<%= app._id %>',
+          href: 'http://localhost:3000/client/app/show/<%= app._id %>'
         }, function(response){});
       }
     </script>
 
 
-<!-- Footer
-============================================= -->
-<footer id="footer" class="dark">
-
-    <div class="container">
-
-        <!-- Footer Widgets
-        ============================================= -->
-        <div class="footer-widgets-wrap clearfix">
-
-            <div class="col_one_third">
-
-
-
-            </div>
-
-        </div>
-
-    </div><!-- .footer-widgets-wrap end -->
-
-</footer><!-- #footer end -->
-
-</div><!-- #wrapper end -->
-
-<!-- Go To Top
-============================================= -->
-<div id="gotoTop" class="icon-angle-up"></div>
-
-<!-- External JavaScripts
-============================================= -->
-<script type="text/javascript" src="../../client/js/jquery.js"></script>
-<script type="text/javascript" src="../../client/js/plugins.js"></script>
-
-<!-- Footer Scripts
-============================================= -->
-<script type="text/javascript" src="../../client/js/functions.js"></script>
-
-
-</body>
-</html>
+<% include ./partials/footer_1 %>

@@ -14,12 +14,12 @@ var mongoose       = require("mongoose"),
     User           = require("./models/user");
     
 var landingRoutes            = require('./routes/landing.js'),
-    androidRoutes            = require('./routes/android'),
+    sm_manualsRoutes         = require('./routes/sm_manuals'),
     newsRoutes               = require('./routes/news'),
     authRoutes               = require('./routes/auth'),
     applicationRoutes        = require('./routes/applications'),
     news_clientRoutes        = require('./routes/news_client'),
-    applications_clientRoute = require('./routes/applications_client')
+    applications_clientRoute = require('./routes/applications_client');
     
 app.use(session({
     secret: 'keyboard cat',
@@ -48,7 +48,7 @@ app.use(session({
   });  
   
     app.use(landingRoutes);
-    app.use(androidRoutes);
+    app.use(sm_manualsRoutes);
     app.use(newsRoutes);
     app.use(authRoutes);
     app.use(applicationRoutes);

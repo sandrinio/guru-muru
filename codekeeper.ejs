@@ -1,232 +1,94 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-<head>
+<% include ./partials/header_1 %>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="SemiColonWeb" />
-
-    <!-- Stylesheets
-    ============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="../client/css/bootstrap.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/stylesheets/style.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/dark.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/font-icons.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/magnific-popup.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/stylesheets/w3.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/stylesheets/main.css" type="text/css" />
-    <link rel="stylesheet" href="../client/css/arial-geo.min.css">
-
-
-    <link rel="stylesheet" href="../client/css/responsive.css" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-
-    <!-- Document Title
-    ============================================= -->
-    <title>GSM Guru</title>
-
-</head>
-
-<body class="stretched">
-
-<!-- Document Wrapper
+<!-- Primary Navigation
 ============================================= -->
-<div id="wrapper" class="clearfix">
+<nav id="primary-menu">
 
-    <!-- Header
-    ============================================= -->
-    <header id="header" class="transparent-header dark">
+    <ul class="sf-js-enabled" style="touch-action: pan-y;">
+        <li><a href="/"><div class="hover-effect">სიახლეები</div></a>
+        </li>
+        <li><a href="/manuals/smartphone-manuals"><div class="hover-effect active-link">ვიდეო ინსტრუქციები</div></a>
+        </li>
+        <li><a href="#"><div class="hover-effect">აპები და სერვისები</div></a>
+        </li>
+    </ul>
 
-        <div id="header-wrap">
+    <% include ./partials/header_2 %> <!-- TOP SEARCH BAR -->
 
-            <div class="container clearfix">
+</nav><!-- #primary-menu end -->
 
-                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+</div>
 
-                <!-- Logo
-                ============================================= -->
-                <div id="logo">
-                    <a href="#" class="standard-logo" data-dark-logo="../client/images/gurulogo.png"><img src="../client/images/gurulogo.png" alt="GSM Guru"></a>
-                    <a href="#" class="retina-logo" data-dark-logo="../client/images/gurulogo.png"><img src="../client/images/gurulogo.png" alt="Guru"></a>
-                </div><!-- #logo end -->
+</div>
 
-                <!-- Primary Navigation
-                ============================================= -->
-                <nav id="primary-menu">
 
-                    <ul class="sf-js-enabled" style="touch-action: pan-y;">
-                        <li><a href="#"><div class="hover-effect">მთავარი</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">სხვადასხვა</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">ანდროიდი</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">აიფონი</div></a>
-                        </li>
-                        <li><a href="#"><div class="hover-effect">აპები</div></a>
-                        </li>
-                    </ul>
+</header><!-- #header end -->
+
+
+</header><!-- #header end -->
 
 
 
-                    <!-- Top Search
-                    ============================================= -->
-                    <div id="top-search">
-                        <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                        <form action="" method="get">
-                            <input type="text" name="q" class="form-control" value="" placeholder="შეიყვანე ტექსტი &amp; დააჭირე ენტერს">
-                        </form>
-                    </div><!-- #top-search end -->
+<!-- Content
+============================================= -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-sm-12" id="my-container">
 
-                </nav><!-- #primary-menu end -->
+            <!-- Post Content
+            ============================================= -->
+            <div id="processTabs">
+                <ul class="process-steps bottommargin clearfix">
+                    <li>
+                        <a href="#ptab1" class="i-circled i-bordered i-alt divcenter">1</a>
+                        <h5>ინსტრუქციები</h5>
+                    </li>
+                    <li>
+                        <a href="#ptab2" class="i-circled i-bordered i-alt divcenter">2</a>
+                        <h5>სმარტფონი</h5>
+                    </li>
+                    <li>
+                        <a href="#ptab3" class="i-circled i-bordered i-alt divcenter">3</a>
+                        <h5>სისტემა</h5>
+                    </li>
+                    <li>
+                        <a href="#ptab4" class="i-circled i-bordered i-alt divcenter">4</a>
+                        <h5>შედეგი</h5>
+                    </li>
+                </ul>
+                <div>
+                    <div id="ptab1">
 
-            </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, ipsa, fuga, modi, corporis maiores illum fugit ratione cumque dolores sint obcaecati quod temporibus. Expedita, sapiente, veritatis, impedit iusto labore sed itaque sunt fugiat non quis nihil hic quos necessitatibus officiis mollitia nesciunt neque! Minus, mollitia at iusto unde voluptate repudiandae.</p>
 
-        </div>
-
-
-    </header><!-- #header end -->
+                        <div class="table-responsive">
 
 
-    <!-- Page Title
-    ============================================= -->
-    <section id="page-title" class="page-title-parallax page-title-dark" style="padding: 250px 0; background-image: url('../client/images/background1.jpg'); background-size: cover; background-position: center center;" data-stellar-background-ratio="0.4">
 
-        <div class="container clearfix">
-            <h1>ისწავლე სმარტფონი ჩვენთან ერთად</h1>
-
-            <h1><span class="animate-left">ვიდეო</span> ინსტრუქციებით</h1>
-
-        </div>
-
-    </section><!-- #page-title end -->
-
-    <div class="fancy-title title-center title-dotted-border topmargin">
-        <h3>ყველაზე მოთხოვნადი</h3>
-    </div>
-
-    <!-- Most Wanted - Carousel
-    ============================================= -->
-    <div class="container clearfix">
-        <div id="oc-portfolio" class="owl-carousel portfolio-carousel carousel-widget" data-margin="20" data-nav="true" data-pagi="false" data-items-xxs="1" data-items-xs="2" data-items-sm="3" data-items-md="4">
-
-            <% var x = 5 %>
-            <% for(i = 0; i < x; i++) { %>
-            <div class="oc-item">
-                <div class="iportfolio">
-                    <div class="portfolio-image">
-                        <a href="#">
-                            <img src="../client/images/1.jpg" alt="Open Imagination">
-                        </a>
-                        <div class="portfolio-overlay">
-                            <a href="#" class="center-icon"><i class="icon-line-ellipsis"></i></a>
                         </div>
+
+                        <a href="#" class="button button-3d nomargin fright tab-linker" rel="2">Checkout &rArr;</a>
+
                     </div>
-                    <div class="portfolio-desc">
-                        <h3><a href="#">როგორ დავრეგისტრირდეთ Play Market-ზე</a></h3>
-                        <span><a href="#">Media</a>, <a href="#">Icons</a></span>
+                    <div id="ptab2">
+
+                    </div>
+                    <div id="ptab3">
+
+                    </div>
+                    <div id="ptab4">
+
                     </div>
                 </div>
             </div>
-            <% } %>
 
         </div>
 
-
-        <div class="clear"></div>
-
-    </div>
-    <!-- Most Wanted - Carousel END-->
-
-
-    <!-- Content
-    ============================================= -->
-    <section id="content">
-
-        <div class="content-wrap">
-
-            <div class="container clearfix">
-
-                <!-- Post Content
-                ============================================= -->
-                <div class="postcontent nobottommargin clearfix">
-
-                    <!-- Posts
-                    ============================================= -->
-
-                    <div class="fancy-title title-center title-dotted-border topmargin">
-                        <h3>ახალი ამბები</h3>
-                    </div>
-                    <div id="posts" class="small-thumbs">
-                        <% data.hot.forEach(function( hotNews ) { %>
-                        <div class="entry clearfix">
-                            <div class="entry-image">
-                                <a href="/hotNews/<%= hotNews._id %>" data-lightbox="image"><img class="image_fade" src="<%= hotNews.billboard %>" alt="Standard Post with Image"></a>
-                            </div>
-                            <div class="entry-c">
-                                <div class="entry-title">
-                                    <h2><a href="/hotNews/<%= hotNews._id %>"><%= hotNews.title %></a></h2>
-                                </div>
-                                <ul class="entry-meta clearfix">
-                                    <li><i class="icon-calendar3"></i><%= hotNews.date.toDateString() %>4</li>
-                                    <li><a href="#"><i class="icon-user"></i><%= hotNews.author.fullname %></a></li>
-                                    <li><i class="icon-folder-open"></i> <a href="#">General</a>, <a href="#">Media</a></li>
-                                </ul>
-                                <div class="entry-content">
-                                    <p><%- hotNews.content.slice(0, 200); %></p>
-                                    <a href="/hotNews/<%= hotNews._id %>" class="more-link">მეტი</a>
-                                </div>
-                            </div>
-                        </div>
-                        <% }); %>
-
-                    </div><!-- #posts end -->
-
-                    <!-- Pagination
-                    ============================================= -->
-
-                    <div class="box-footer text-center">
-                        <nav aria-label="Page navigation">
-                            <% if (pageCount > 1) { %>
-                            <ul class="pagination">
-                                <% if (currentPage > 1) { %>
-                                <li><a href="/mainPage/?page=1">&laquo;</a></li>
-                                <% } %>
-                                <% var i = 1;
-                                    if (currentPage > 5) {
-                                        i =+ currentPage - 4;
-                                    } %>
-                                <% if (i !== 1) { %>
-                                <li class="disabled"><a href="#">...</a></li>
-                                <% } %>
-                                <% for (i; i <= pageCount; i++) { %>
-                                <% if (currentPage == i) { %>
-                                <li class="active"><span><%= i %> <span class="sr-only">(current)</span></span></li>
-                                <% } else { %>
-                                <li><a href="/mainPage/?page=<%= i %>"><%= i %></a></li>
-                                <% } %>
-                                <% if (i == ( + currentPage + 4)) { %>
-                                <li class="disabled"><a href="#">...</a></li>
-                                <% break; } %>
-                                <% } %>
-                                <% if (currentPage == pageCount) { %>
-                                <li><a href="/mainPage/?page=<%= currentPage %>">&raquo;</a></li>
-                                <% } %>
-                            </ul>
-                        </nav>
-                        <% } %>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Sidebar
         ============================================= -->
-        <div class="sidebar nobottommargin col_last clearfix">
-            <div class="sidebar-widgets-wrap">
+        <% var x = 5 %>
+        <div class="sidebar-margins">
+            <div class="col-md-3 col-sm-12">
 
                 <div class="widget clearfix">
                     <h4>აპები</h4>
@@ -235,7 +97,7 @@
                         <div class="spost clearfix">
                             <div class="entry-image">
                                 <a href="#">
-                                    <img src="../client/images/1.jpg" alt="">
+                                    <img src="../../client/images/1.jpg" alt="">
                                 </a>
                             </div>
                             <div class="entry-c">
@@ -256,7 +118,7 @@
                         <div class="spost clearfix">
                             <div class="entry-image">
                                 <a href="#">
-                                    <img src="../client/images/1.jpg" alt="">
+                                    <img src="../../client/images/1.jpg" alt="">
                                 </a>
                             </div>
                             <div class="entry-c">
@@ -269,50 +131,23 @@
                         <% } %>
                     </div>
                 </div>
+            </div><!-- .sidebar end -->
 
-            </div>
         </div>
-        <!-- .sidebar end -->
-    </section><!-- #content end -->
+    </div>
+</div>
+</section><!-- #content end -->
+
+<script type="text/javascript">
+
+  $(function() {
+    $( "#processTabs" ).tabs({ show: { effect: "fade", duration: 400 } });
+    $( ".tab-linker" ).click(function() {
+      $( "#processTabs" ).tabs("option", "active", $(this).attr('rel') - 1);
+      return false;
+    });
+  });
+</script>
 
 
-    <!-- Footer
-    ============================================= -->
-    <footer id="footer" class="dark">
-
-        <div class="container">
-
-            <!-- Footer Widgets
-            ============================================= -->
-            <div class="footer-widgets-wrap clearfix">
-
-                <div class="col_one_third">
-
-
-
-                </div>
-
-            </div>
-
-        </div><!-- .footer-widgets-wrap end -->
-
-    </footer><!-- #footer end -->
-
-</div><!-- #wrapper end -->
-
-<!-- Go To Top
-============================================= -->
-<div id="gotoTop" class="icon-angle-up"></div>
-
-<!-- External JavaScripts
-============================================= -->
-<script type="text/javascript" src="../client/js/jquery.js"></script>
-<script type="text/javascript" src="../client/js/plugins.js"></script>
-
-<!-- Footer Scripts
-============================================= -->
-<script type="text/javascript" src="../client/js/functions.js"></script>
-
-
-</body>
-</html>
+<% include ./partials/footer_1 %>

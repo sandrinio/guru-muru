@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 
-router.get('/smartphones/android', function (req, res) {
-  res.render('android/android')
+router.get('/manuals/smartphone-manuals', function (req, res) {
+  res.render('client/sm_manuals')
 });
 
 
