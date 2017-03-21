@@ -125,7 +125,7 @@ router.post('/news/new/blogPost', middleware.isLoggedIn, function(req, res){
         return console.log(err)
        }
        console.log(createdPost);
-       res.redirect("admin/admin-panel");
+       res.redirect("admin/adminLanding");
   });
 });
 
