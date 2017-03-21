@@ -143,3 +143,8 @@
     width: 25px;
     margin-top: -5px;
 }
+
+#tab-8 ul li a i {
+    font-size: 18px;
+    padding-right: 5px;
+}

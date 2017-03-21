@@ -475,3 +475,7 @@ body {
     min-width: 980px;
 }
 /* ==================== END ==================== */
+
+.admin-apps-img img {
+    width: 25px;
+}

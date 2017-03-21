@@ -9,6 +9,15 @@ var Apps = require('../models/applications'),
     fileType       = require('file-type');
 
 
+router.get('/admin/app-list', function (req, res) {
+  Apps.find({}, function (err, app) {
+    if(err){
+      return console.log(err)
+    }
+    res.render('admin/applications/app_list', {app: app })
+  });
+});
+
 router.get('/admin/app/new', function(req, res){
    res.render('admin/applications/new')
 });
