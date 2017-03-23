@@ -35,6 +35,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
-public/uploads/instructions/
-public/uploads/smartphoneFiles/
 /public/uploads/
+!/public/uploads/staticResources/
+Would skip repository guru-muru-v1/
